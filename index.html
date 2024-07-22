@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="back.mov" type="video/mp4">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+  <div class="container">
+    <h1>Calculadora de IMC</h1>
+    <p>Use esta ferramenta simples para calcular seu Índice de Massa Corporal (IMC) e entender se você está dentro do seu peso ideal.</p>
+    <div class="input-group">
+      <label for="altura">Altura (m):</label>
+      <input type="number" id="altura" step="0.01" required>
+    </div>
+    <div class="input-group">
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" step="0.1" required>
+    </div>
+    <div class="input-group">
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" required>
+    </div>
+    <button id="calcularBtn">Calcular IMC</button>
+    <div id="historicoIMC">
+      <h3>Resultados Anteriores:</h3>
+      <select id="historicoSelect">
+        <option>Carregando resultados...</option>
+      </select>
+    </div>
+    <div class="info-box">
+      <div>
+        <h3>O que é IMC?</h3>
+        <p>O cálculo do IMC (Índice de Massa Corporal) é uma medida padrão internacional usada para avaliar se uma pessoa está dentro de uma faixa de peso considerada saudável em relação à sua altura. O IMC é calculado dividindo o peso em quilogramas pelo quadrado da altura em metros.</p>
+      </div>
+      <div>
+        <h3>A importância da idade no IMC</h3>
+        <p>A idade é um fator relevante na análise do IMC, pois o corpo humano muda sua composição ao longo dos anos. O que é considerado um peso saudável para uma pessoa jovem pode ser diferente para uma pessoa mais velha.</p>
+      </div>
+      <div>
+        <h3>Limitações do IMC</h3>
+        <p>O IMC não diferencia massa gorda de massa muscular, o que pode levar a interpretações errôneas da saúde de atletas ou pessoas mais musculosas. Por isso, embora útil, o IMC não deve ser usado como único indicador de saúde ou composição corporal.</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
